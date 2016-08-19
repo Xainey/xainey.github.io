@@ -3,7 +3,7 @@ layout: post
 title:  "Powershell v5 Classes & Concepts"
 date:   2016-08-18 21:46:00
 comments: true
-description: Examples of WMF5 PS Classes and Design Patterns.
+description: Powershell WMF5 PS Classes and Design Patterns.
 categories: 
     - PowerShell
 tags: 
