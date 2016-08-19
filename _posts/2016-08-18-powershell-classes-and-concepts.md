@@ -9,6 +9,7 @@ categories:
 tags: 
     - PowerShell
     - classes
+thumbnail: /images/posts/powershell-classes-and-concepts/powershell-highlander.png
 ---
 
 ![Img](/images/posts/powershell-classes-and-concepts/powershell-highlander.png)
