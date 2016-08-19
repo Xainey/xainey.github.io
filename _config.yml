@@ -1,7 +1,7 @@
 # Site settings
 title: Michael Willis's Blog
 description: "Developer, Student, and Automation Enthusiust. \n Certified in Puncraft and the Wibbly Wobbly. \n Believes in DevOps, Alligators, and Aristotle."
-url: 'http://xainey.github.io'
+url: 'https://xainey.github.io'
 baseurl: '/'
 
 google_analytics: 'UA-82828808-1'
