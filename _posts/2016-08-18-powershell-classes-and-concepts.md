@@ -113,7 +113,7 @@ hidden [String] $RealName
 The term `Method` is a fancy way of describing a function defined inside of a class.
 In OOP, a method can take arguments the same as a function; however, they must return a value.
 
-* If a method **does not** return a value this the return type is `[Void]`
+* If a method **does not** return a value, the return type is `[Void]`.
 * A **data type** should be type-hinted for each argument in the method header, e.g., `[String] $Name`.
 
 A method should have an `access modifier`, `name`, `arguments`, and `return type`.
@@ -264,9 +264,9 @@ class CyberNinja
 
 ### Creating instances of a class
 
-To use a class, we must instantiate an object unless using static properties methods.
+To use a class, we must instantiate an object unless using static properties or methods.
 Most commonly, this is done using the `new()` static method or the [New-Object Command][New-Object].
-In some cases, creating classes dynamically by type, the *New-Object* command is necessary.
+In some cases, such as creating classes dynamically by type, the *New-Object* command is necessary.
 
 ```powershell
 # Using Static "new" method.
@@ -509,7 +509,7 @@ Hello Mike!
 
 ### Inheritance
 
-`Inheritance` allows for programmers to create classes from existing classes by extending them.
+`Inheritance` allows for programmers to create classes from existing classes by **extending** them.
 In this way, we can reuse classes and extend the functionality without editing a closed class. \*cough SOLID\*
 When a class is **extended**, all of the members from the base or parent class are inherited (passed on) to the child class.
 
@@ -1068,7 +1068,7 @@ $myPizza.placeOrder()
 
 (New-Object -TypeName Pizza).placeOrder()
 
-# Chaining Example Multiline. The "." on the right feel strange.
+# Chaining Example Multiline. The "." on the right feels strange.
 cls
 [Pizza]::newOrder().
     chooseCrust("HandTossed").
@@ -1181,7 +1181,7 @@ Currently, there are some **restrictions** for loading class files.
 
 Thankfully, classes and child classes do not have to be in the same file.
 
-If we use the following common example of dot source loading .ps1 files, we could run into this restriction.
+If we use the following common example of **dot source** loading `.ps1` files, we could run into this restriction.
 
 ```powershell
 $Public  = @( Get-ChildItem -Path $PSScriptRoot\Public\*.ps1 -ErrorAction SilentlyContinue )
