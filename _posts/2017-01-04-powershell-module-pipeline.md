@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Hitchhiker's Guide to the PowerShell Module Pipeline"
+title:  "Hitchhikers Guide to the PowerShell Module Pipeline"
 date:   2017-01-20 21:46:00
 comments: true
 description: Developing a delivery pipeline for PowerShell Modules
