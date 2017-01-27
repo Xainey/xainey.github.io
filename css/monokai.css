@@ -81,6 +81,13 @@ pre.highlight,
     color: #FF0;
 }
 
+/* text highlight */
+
+ .language-text .highlight .code pre
+{
+    /*color: #66d9ef;*/
+    color: #fff;
+}
 
 /* powershell highlight */
 pre.lineno {
@@ -101,4 +108,10 @@ td.code pre
 
 td.gutter.gl{
     width: 40px;
+}
+
+/* use dart for file tree highlighting lol */
+.language-dart .highlight .err {
+    color: #f92672;
+    background-color: transparent;
 }

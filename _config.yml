@@ -16,6 +16,10 @@ author:
 #  linkedin_username:
 #  facebook_username:
 
+# https://github.com/jekyll/jekyll/issues/5037#issuecomment-228809544
+gist:
+  noscript: false
+
 defaults:
   -
     scope:
