@@ -32,7 +32,7 @@ The supplementary project: [Xainey/PSHitchhiker][PSHitchhiker] is available on G
 
 ## Introduction
 
-PowerShell has been surprisingly fun and straightforward language to learn. 
+PowerShell has been a surprisingly fun and straightforward language to learn. 
 That being said, it has also greatly evolved since the earlier versions.
 As I first started learning the language, I followed advice and examples from some of the earliest posts on *Hey, Scripting Guy!*, *StackOverflow* and other *TechNet* boards.
 As a newfound chef in the PowerShell kitchen, I was cooking up spaghetti code by the truckload.
@@ -616,6 +616,30 @@ task BeforeClean {}
 
 # Synopsis: Executes after the Clean task.
 task AfterClean {}
+```
+
+**Update:** Thanks to Roman Kuzmin ([@romkuzmin]) for demonstrating a [better way][Issue-1] to add hooks.
+By using the flags `-Before` and `-After`, we do not need to define our hook tasks unless we plan on implementing them.
+
+```powershell
+###############################################################################
+# PSHitchhiker.build.ps1, Note that we do not have to pre-define/inject hooks
+###############################################################################
+
+# Synopsis: Clean Artifacts Directory
+task Clean {
+    # ...
+}
+
+###############################################################################
+# PSHitchhiker.settings.ps1, Note that we do not have to define dummy hooks
+###############################################################################
+
+# Synopsis: Executes before the Clean task.
+# task BeforeClean -Before Clean {}
+
+# Synopsis: Executes after the Clean task.
+# task AfterClean -After Clean {}
 ```
 
 ### Creating Tasks for Pipeline
@@ -1219,6 +1243,11 @@ So long and thanks for all the ~~fish~~ shares!
 30. [PSHitchhiker][PSHitchhiker]
 31. [PSTestReport][PSTestReport]
 
+## Changelog
+
+- 2017-01-27 
+    - Update Invoke-Build documentation on before/after Hooks to address [Issue-1]. 
+
 [Release Pipeline]:                     http://aka.ms/thereleasepipelinemodelpdf
 [Building a Simple Release Pipeline]:   https://devblackops.io/building-a-simple-release-pipeline-in-powershell-using-psake-pester-and-psdeploy/
 [Invoke-Build]:                         https://github.com/nightroman/Invoke-Build
@@ -1250,6 +1279,9 @@ So long and thanks for all the ~~fish~~ shares!
 [PSDepend]:                             https://github.com/RamblingCookieMonster/PSDepend
 [PSHitchhiker]:                         https://github.com/Xainey/PSHitchhiker
 [PSTestReport]:                         https://github.com/Xainey/PSTestReport
+
+[@romkuzmin]:                           https://twitter.com/romkuzmin
+[Issue-1]:                              https://github.com/Xainey/xainey.github.io/issues/1
 
 *[TDD]: Test Driven Development
 *[BDD]: Behavior Driven Development
