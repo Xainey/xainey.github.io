@@ -2,7 +2,69 @@
 @import url(monokai.css);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
 
+/* Table Borrowed from Bootstrap */
+table.table-striped {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  background-color: transparent;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+table.table-striped>caption+thead>tr:first-child>td,
+table.table-striped>caption+thead>tr:first-child>th,
+table.table-striped>colgroup+thead>tr:first-child>td,
+table.table-striped>colgroup+thead>tr:first-child>th,
+table.table-striped>thead:first-child>tr:first-child>td,
+table.table-striped>thead:first-child>tr:first-child>th {
+    border-top: 0;
+}
+
+table.table-striped>thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd;
+}
+
+table.table-striped>tbody>tr>td,
+table.table-striped>tbody>tr>th,
+table.table-striped>thead>tr>td,
+table.table-striped>thead>tr>th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+
+table.table-striped th{
+  font-weight: bold;
+}
+
+table.table-striped th, table.table-striped td {
+    text-align: left;
+}
+
+table.table-striped>tbody>tr:nth-of-type(odd) {
+  background-color: #f9f9f9;
+}
+
+table.table-striped>tbody>tr>td,
+table.table-striped>tbody>tr>th,
+table.table-striped>thead>tr>td,
+table.table-striped>thead>tr>th {
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+}
+
 /* Modifications */
+img + em {
+    text-align: center;
+    width: 100%;
+    display: block;
+    padding: .3em 0 2em 0;
+}
 
 pre.highlight,
 .highlight pre {
@@ -14,7 +76,7 @@ pre.highlight code,
   white-space: pre-wrap;
 }
 
-.btn, 
+.btn,
 .navigation__item a {
   margin: 5px 0;
   white-space: nowrap;
@@ -61,7 +123,7 @@ pre.highlight code,
  * Block Quotes
  */
 
-blockquote.pull 
+blockquote.pull
 {
   border-radius: 0;
   border: 0;
@@ -132,7 +194,7 @@ blockquote.pull.quote::after
 }
 
 /*
- * Table of Contents 
+ * Table of Contents
  */
 
 #markdown-toc
@@ -147,18 +209,18 @@ blockquote.pull.quote::after
     list-style: none;
 }
 
-ul#markdown-toc 
+ul#markdown-toc
 {
   margin: 0;
 }
 
-ul#markdown-toc > li > a::before 
+ul#markdown-toc > li > a::before
 {
   content: '{ ';
   color: #333333;
 }
 
-ul#markdown-toc > li > a 
+ul#markdown-toc > li > a
 {
   font-size: 1.4em;
   line-height: 2.4em;
@@ -192,7 +254,7 @@ a {
     color: #e4003d
 }
 
-.panel-cover--overlay 
+.panel-cover--overlay
 {
   background: #272822;
   /*background: url('../images/dark-triangles.png');*/
@@ -216,7 +278,7 @@ a {
   font-size: 1.5em;
 }
 
-.panel-title.panel-cover__title::after 
+.panel-title.panel-cover__title::after
 {
     content: '~ ';
     color: #f92672;
@@ -240,7 +302,7 @@ a {
     color: #f92672;
 }
 
-.post hr 
+.post hr
 {
   display: block;
   width: 100%;
@@ -248,7 +310,7 @@ a {
   border-top: 1px solid #dddddd;
 }
 
-code 
+code
 {
   background: #f0f2f1;
   color: #00529b;
@@ -269,7 +331,7 @@ article h1 /* Title */
 
 article h2
 {
-  font-size: 2.4em;  
+  font-size: 2.4em;
   margin-left: -25px;
 }
 
@@ -297,9 +359,9 @@ article h4:before {
    content: "> ";
 }
 
-article h2, article h3, article h4 
+article h2, article h3, article h4
 {
-  margin-top: 1.0em;  
+  margin-top: 1.0em;
 }
 
 
@@ -360,7 +422,7 @@ article h1 span.prompt::after {
 
 dl {
   padding-left: 10em !important;
-  
+
 }
 dl:after {
   content: "";
@@ -412,7 +474,7 @@ abbr
 .btn, .navigation__item a {
     /*padding: 10px 20px;*/
     border: 1px solid #020202;
-    border-radius: 0px; 
+    border-radius: 0px;
     font-size: .9em;
     font-weight: bold;
     letter-spacing: 1px;
