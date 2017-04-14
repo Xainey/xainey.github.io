@@ -2,7 +2,7 @@
 layout: post
 title:  Back to the Frontend | A PowerShell-Electron Demo
 date:   2017-04-11 21:46:00
-comments: false
+comments: true
 description: Creating a GUI app with PowerShell and Electron
 categories:
     - PowerShell
