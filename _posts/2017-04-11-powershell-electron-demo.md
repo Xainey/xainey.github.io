@@ -1285,7 +1285,7 @@ as always, feel free to file and issue or PR if you find any errors.
 37. [Developer-Roadmap]
 38. [Atom Electron]
 
-[Xainey/powershell-electron-demo]: [https://github.com/Xainey/powershell-electron-demo]
+[Xainey/powershell-electron-demo]: https://github.com/Xainey/powershell-electron-demo
 [Stephen Owen's GUI ToolMaking Series]: https://foxdeploy.com/2015/04/16/part-ii-deploying-powershell-guis-in-minutes-using-visual-studio/
 [Git]:    https://git-scm.com/downloads
 [VSCode]: https://code.visualstudio.com/Download
