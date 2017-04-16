@@ -722,7 +722,7 @@ Add the following in `index.html` between our **Form** and **Output** components
 ```html
 <!-- Error -->
 <div class="row justify-content-center top-buffer">
-    <div class="alert alert-danger" role="alert" style="display: visible">
+    <div class="alert alert-danger" role="alert" style="display: block">
         <strong>Whoops!</strong>
         <div class="message">Flux capacitor is not Fluxing.</div>
     </div>
@@ -734,7 +734,7 @@ Give it a quick refresh.
 ![FluxNotFluxing](/images/posts/powershell-electron-demo/whoops-flux-capacitor-not-fluxing.png)
 *The message will appear below our form*
 
-Now, lets leave the message blank and set `visible` in `style="display: visible"` to `none` to hide the component.
+Now, lets leave the message blank and set `block` in `style="display: block"` to `none` to hide the component.
 
 To show the alert whenever an error occurs, add some *jQuery* to our `.catch()` function in `renderer.js`.
 
