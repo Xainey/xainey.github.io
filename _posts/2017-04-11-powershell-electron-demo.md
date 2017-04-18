@@ -69,11 +69,14 @@ You start out looking to create a project that is ultimately CSS, HTML, and Java
 Later you find yourself trying to figure out how to use SASS, Gulp, Webpack, Babel, Browserify, NodeJS, React, Flux, Redux, etc.
 Check out the [Developer-Roadmap] for a quick bird's eye view.
 
-In this article, we will stick to using some of the most common and basic tools.
+In this article, we will stick to using some of the most common and basic tools. Here is a quick preview of the completed app.
+
+![Final Product](/images/posts/powershell-electron-demo/final-app.png)
+*Finished Product: Diskr*
 
 ### Installing Tools
 
-We will need to pull in everything though git and NodeJS (npm). 
+We will need to pull in everything though git and NodeJS (npm).
 The optional tools are by preference only. If you haven't written PowerShell in VSCode do yourself a solid and go try it out.
 Install these tools manually or with Chocolatey.
 
@@ -283,7 +286,7 @@ $(document).ready( () => console.log("Page is loaded!") )
 Start the app again with `npm start` or refresh it with `Ctrl-R`.
 
 ![TestingJQuery](/images/posts/powershell-electron-demo/testing-jquery.png)
-*Console.log() shows are message in DevTools*
+*Console.log() shows our message in DevTools*
 
 ## Setting up PowerShell
 
@@ -716,6 +719,26 @@ Much cleaner. I probably don't need the PC name in the table considering that I 
 Right now, if any PowerShell error was to occur we are using `console.error()` to log a message.
 In a production app, we will want to emit messages on the GUI.
 To do this we will use the [bootstrap-alert] component for our warning messages.
+
+At this point our entire call stack should look something like this:
+
+<img src='https://g.gravizo.com/svg?
+@startuml;
+participant "Button Click" as A;
+participant "jQuery-Click Event Handler" as B;
+participant "node-powershell" as C;
+participant "powershell.exe" as D;
+A -> B: bound click handled by;
+B -> C: get form input and call;
+C -> D: invokes .ps1 script with arguments;
+...Good Response...;
+D --> C: response handled by .then() promise;
+C --> A: Show/Update dataTable on frontend;
+...Bad Response...;
+D --> C: response handled by .catch() promise;
+C --> A: Show/Update Error alert on frontend;
+@enduml;
+'/>
 
 Add the following in `index.html` between our **Form** and **Output** components.
 
@@ -1236,7 +1259,7 @@ If you inspect the dist folder, you will find that your source files are all eas
 
 Hopefully, this quick demo helps others get starting with Electron and Powershell.
 This started as a quick proof-of-concept I made after talking to few guys about using PowerShell with NodeJS.
-With PowerShell steadily becoming a more solid cross platform product, the pairing with Electron could potentially 
+With PowerShell steadily becoming a more solid cross platform product, the pairing with Electron could potentially
 make some very powerful tools that could be distributed on any OS. If you have any thoughts or questions let me know and
 as always, feel free to file and issue or PR if you find any errors.
 
